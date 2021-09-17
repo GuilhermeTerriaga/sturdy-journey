@@ -61,17 +61,20 @@ Math.arraySum = (function(){
       }
    }
 })();
-let xi = Math.arraySum(x);
+let xiXi = x;
+let xi = Math.arraySum(xiXi);
 let yi = Math.logArray(y);
-let xi2 = Math.squareArray(x);
-let xiyi = Math.multiplyArray(yi, x);
+let xi2 = Math.squareArray(xiXi);
+let xiyi = Math.multiplyArray(yi, xiXi);
 let somaYi = Math.arraySum(yi);
 let somaXi2 = Math.arraySum(xi2);
 let somaXiyi = Math.arraySum(xiyi);
 
 
+
 console.log('x',x);
 console.log('y',y);
+console.log('xiXi', xiXi);
 console.log('xi',xi);
 console.log('yi',yi);
 console.log('xi2', xi2);
