@@ -1,15 +1,12 @@
-X = [];
-Y = [];
-Xi = [];
-Yi = [];
-xiyi = [];
+let x = [0.60, 1.40, 2.40, 3.30];
+let y = [1.5, 3.8, 25.0, 56.0];
 
 Math.logArray = (function() {
    return function(arrayInput) {
    let arrayOutput = [];
    if (arrayInput instanceof Array) {
       for (let i = 0; i < arrayInput.length; i++) {
-         arrayOutput.push(Math.log(arrayInput[i]));
+         arrayOutput.push(Math.log10(arrayInput[i]));
       }
       return arrayOutput;
    }
@@ -64,8 +61,21 @@ Math.arraySum = (function(){
       }
    }
 })();
+let xi = Math.arraySum(x);
+let yi = Math.logArray(y);
+let xi2 = Math.squareArray(x);
+let xiyi = Math.multiplyArray(yi, x);
+let somaYi = Math.arraySum(yi);
+let somaXi2 = Math.arraySum(xi2);
+let somaXiyi = Math.arraySum(xiyi);
 
 
-
-xiyi = Math.arraySum([1, 2, 3, 4, 5, 6]);
-console.log(xiyi);
+console.log('x',x);
+console.log('y',y);
+console.log('xi',xi);
+console.log('yi',yi);
+console.log('xi2', xi2);
+console.log('xiyi',xiyi);
+console.log('somayi', somaYi);
+console.log('somaXi2', somaXi2);
+console.log('somaXiyi', somaXiyi);
