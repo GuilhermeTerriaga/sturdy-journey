@@ -50,7 +50,22 @@ Math.multiplyArray = (function() {
    }
 })();
 
+Math.arraySum = (function(){
+   return function(arrayInput){
+      let arraySoma = 0;
+      if(arrayInput instanceof Array){
+         for (let i =0; i< arrayInput.length; i++){
+            arraySoma +=arrayInput[i];
+         }
+         return arraySoma;
+      }
+      else{
+         return null;
+      }
+   }
+})();
 
 
-xiyi = Math.multiplyArray([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]);
+
+xiyi = Math.arraySum([1, 2, 3, 4, 5, 6]);
 console.log(xiyi);
