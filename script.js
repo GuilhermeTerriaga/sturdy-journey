@@ -73,7 +73,7 @@ function setarArrays(){
      x = x[0];
      y = y[0];
  
- 
+ // calculos não estão retornando certo
     let xiXi = x;
     let xi = Math.arraySum(xiXi);
     let yi = Math.logArray(y);
