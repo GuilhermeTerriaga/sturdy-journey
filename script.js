@@ -1,17 +1,7 @@
 var x = [];
 var y = [];
 
-// function onLoad(){
-//    btnEnviarXY = document.getElementById('btnEnviarXY');
-//    btnEnviarXY.addEventListener('click', setarArrays);
-// }
 
-function setarArrays(){
-   x = [document.getElementById("xArray").value]; // campo pro X
-   y = [document.getElementById("yArray").value]; // campo pro Y
-   console.log(x);
-   console.log(y);
-}
 
 Math.logArray = (function() {
    return function(arrayInput) {
@@ -74,45 +64,53 @@ Math.arraySum = (function(){
    }
 })();
 
-if(x.length > 1 && y.length > 1){
-   
-   let xiXi = x;
-   let xi = Math.arraySum(xiXi);
-   let yi = Math.logArray(y);
-   let xi2 = Math.squareArray(xiXi);
-   let xiyi = Math.multiplyArray(yi, xiXi);
-   let somaYi = Math.arraySum(yi);
-   let somaXi2 = Math.arraySum(xi2);
-   let somaXiyi = Math.arraySum(xiyi);
-   let countXixi = x.length;
-   let D = somaXi2 * countXixi - xi * xi;
-   let Da = somaXiyi * countXixi - somaYi * xi;
-   let Db = somaXi2 * somaYi - xi * somaXiyi;
-   let a = Da/D;
-   let b = Db/D;
-   let beta = Math.pow(10, a);
-   let alfa = Math.pow(10, b);
-   let xDeterminante = 2 /// precisa ser inputado pelo usuário;
-   let yAlfaBeta = alfa * Math.pow(beta, xDeterminante); 
-   
-   console.log('x',x);
-   console.log('y',y);
-   console.log('xiXi', xiXi);
-   console.log('xi',xi);
-   console.log('yi',yi);
-   console.log('xi2', xi2);
-   console.log('xiyi',xiyi);
-   console.log('somayi', somaYi);
-   console.log('somaXi2', somaXi2);
-   console.log('somaXiyi', somaXiyi);
-   console.log('count Xixi', countXixi);
-   console.log('D', D);
-   console.log('Da', Da);
-   console.log('Db', Db);
-   console.log('a', a);
-   console.log('b', b);
-   console.log('alfa', alfa);
-   console.log('beta', beta);
-   console.log('y de alfa e beta', yAlfaBeta);
-}
-   
+
+function setarArrays(){
+   var x = [document.getElementById("xArray").value]; // campo pro X
+   var y = [document.getElementById("yArray").value]; // campo pro Y
+    console.log(x);
+    console.log(y);
+     x = x[0];
+     y = y[0];
+ 
+ 
+    let xiXi = x;
+    let xi = Math.arraySum(xiXi);
+    let yi = Math.logArray(y);
+    let xi2 = Math.squareArray(xiXi);
+    let xiyi = Math.multiplyArray(yi, xiXi);
+    let somaYi = Math.arraySum(yi);
+    let somaXi2 = Math.arraySum(xi2);
+    let somaXiyi = Math.arraySum(xiyi);
+    let countXixi = x.length;
+    let D = somaXi2 * countXixi - xi * xi;
+    let Da = somaXiyi * countXixi - somaYi * xi;
+    let Db = somaXi2 * somaYi - xi * somaXiyi;
+    let a = Da/D;
+    let b = Db/D;
+    let beta = Math.pow(10, a);
+    let alfa = Math.pow(10, b);
+    let xDeterminante = 2 /// precisa ser inputado pelo usuário;
+    let yAlfaBeta = alfa * Math.pow(beta, xDeterminante); 
+    
+    console.log('x',x);
+    console.log('y',y);
+    console.log('xiXi', xiXi);
+    console.log('xi',xi);
+    console.log('yi',yi);
+    console.log('xi2', xi2);
+    console.log('xiyi',xiyi);
+    console.log('somayi', somaYi);
+    console.log('somaXi2', somaXi2);
+    console.log('somaXiyi', somaXiyi);
+    console.log('count Xixi', countXixi);
+    console.log('D', D);
+    console.log('Da', Da);
+    console.log('Db', Db);
+    console.log('a', a);
+    console.log('b', b);
+    console.log('alfa', alfa);
+    console.log('beta', beta);
+    console.log('y de alfa e beta', yAlfaBeta);
+ }
+ 
