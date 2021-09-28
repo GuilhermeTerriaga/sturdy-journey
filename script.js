@@ -1,6 +1,6 @@
-var x = [];
-var y = [];
-
+var x = []; //array separado por virugulas
+var y = []; //array separado por virugulas
+let xDeterminante = ; //numero
 
 
 Math.logArray = (function() {
@@ -90,7 +90,7 @@ function setarArrays(){
     let b = Db/D;
     let beta = Math.pow(10, a);
     let alfa = Math.pow(10, b);
-    let xDeterminante = 2 /// precisa ser inputado pelo usuário;
+    
     let yAlfaBeta = alfa * Math.pow(beta, xDeterminante); 
     
     console.log('x',x);
